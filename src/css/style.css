@@ -1,4 +1,4 @@
-@import url("\ normalize.css");
+@import url("normalize.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
@@ -11,10 +11,10 @@
     --secondary-color: hsl(356, 69%, 56%);
     --color-Facebook: hsl(208, 92%, 53%);
     --color-Twitter: hsl(203, 89%, 53%);
-    --color-Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --color-Instagram: linear-gradient(270deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --color-YouTube: hsl(348, 97%, 39%);
 
-    --Toggle-dark: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --Toggle-dark: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --Toggle-light: hsl(230, 22%, 74%);
 
     /* DARK COLORS */
@@ -25,17 +25,19 @@
     --dark-text2: hsl(0, 0%, 100%);
 
     /* LIGHT COLORS */
-    --dark-bg: hsl(0, 0%, 100%);
-    --dark-top-bg: hsl(225, 100%, 98%);
-    --dark-card: hsl(227, 47%, 96%);
-    --dark-text1: hsl(228, 12%, 44%);
-    --dark-text2: hsl(230, 17%, 14%);
+    --light-bg: hsl(0, 0%, 100%);
+    --light-top-bg: hsl(225, 100%, 98%);
+    --light-card: hsl(227, 47%, 96%);
+    --light-text1: hsl(228, 12%, 44%);
+    --light-text2: hsl(230, 17%, 14%);
 
     /* Typography */
     --text-size: 14px;
     --font: "Inter", sans-serif;
     --weight-1: 400;
     --weight-2: 700;
+
+    --radius: 5px;
 }
 
 * {
@@ -47,4 +49,162 @@
 html {
     font-family: var(--font);
     font-size: var(--text-size);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--dark-bg);
+}
+
+.container {
+    max-width: var(--desktop);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title h1 {
+    color: var(--dark-text2);
+}
+
+.header__title p {
+    color: var(--dark-text1);
+}
+
+.media {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 2rem;
+    grid-auto-rows: auto;
+}
+
+.media__cart {
+    background-color: var(--dark-card);
+    text-align: center;
+    padding-block: 2rem;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.media__cart::before {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.media__cart.facebook::before {
+    background-color: var(--color-Facebook);
+}
+
+.media__cart.twitter::before {
+    background-color: var(--color-Twitter);
+}
+
+.media__cart.instagram::before {
+    background: var(--color-Instagram);
+}
+
+.media__cart.youtube::before {
+    background-color: var(--color-YouTube);
+}
+
+.cart__icon,
+.cart__description {
+    color: var(--dark-text1);
+}
+
+.cart__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cart__number {
+    color: var(--dark-text2);
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+
+.cart__description {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.cart__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.up {
+    color: var(--primary-color);
+}
+
+.down {
+    color: var(--secondary-color);
+}
+
+.overview {
+    margin-top: 4rem;
+}
+
+.overview__title {
+    color: var(--dark-text2);
+    text-transform: capitalize;
+    margin-block: 2rem;
+}
+
+.overview__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 2rem;
+    grid-auto-rows: auto;
+}
+
+.overview__cart {
+    background-color: var(--dark-card);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+}
+
+.cart__title,
+.overview .cart__number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart__number p:first-child {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.cart__title {
+    color: var(--dark-text1);
+}
+
+.cart__percentage {
+    font-size: initial;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
 }

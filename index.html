@@ -6,39 +6,163 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<title>Frontend Mentor | [Challenge Name Here]</title>
+	<link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
+	<div class="container">
+		<header class="header">
+			<div class="header__title">
+				<h1>Social Media Dashboard</h1>
+				<p>Total Followers: 23,004</p>
+			</div>
+			<fieldset>
+				<label for="">
+					<span>Dark Mode</span>
+					<button type="button"></button>
+				</label>
+			</fieldset>
+		</header>
+		<main class="main">
+			<div class="media">
+				<div class="media__cart facebook">
+					<p class="cart__icon"><img src="images/icon-facebook.svg" alt="facebook">@nathanf</p>
+					<h2 class="cart__number">1987</h2>
+					<p class="cart__description">Followers</p>
+					<p class="cart__date up"><img src="images/icon-up.svg" alt="up">12 Today</p>
+				</div>
+				<div class="media__cart twitter">
+					<p class="cart__icon"><img src="images/icon-twitter.svg" alt="twitter">@nathanf</p>
+					<h2 class="cart__number">1044</h2>
+					<p class="cart__description">Followers</p>
+					<p class="cart__date up"><img src="images/icon-up.svg" alt="up">99 Today</p>
+				</div>
+				<div class="media__cart instagram">
+					<p class="cart__icon"><img src="images/icon-instagram.svg" alt="instagram">@realnathanf</p>
+					<h2 class="cart__number">11k</h2>
+					<p class="cart__description">Followers</p>
+					<p class="cart__date up"><img src="images/icon-up.svg" alt="up">1099 Today</p>
+				</div>
+				<div class="media__cart youtube">
+					<p class="cart__icon"><img src="images/icon-youtube.svg" alt="youtube">Nathan F.</p>
+					<h2 class="cart__number">8239</h2>
+					<p class="cart__description">Subscribers</p>
+					<p class="cart__date down"><img src="images/icon-down.svg" alt="down">144 Today</p>
+				</div>
+			</div>
+			<div class="overview">
+				<h2 class="overview__title">overview - today</h2>
+				<div class="overview__cards">
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>page views</h3>
+							<img src="images/icon-facebook.svg" alt="facebook">
+						</div>
+						<div class="cart__number">
+							<p>87</p>
+							<p class="cart__percentage up">
+								<img src="images/icon-up.svg" alt="">
+								3%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>likes</h3>
+							<img src="images/icon-facebook.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>52</p>
+							<p class="cart__percentage down">
+								<img src="images/icon-down.svg" alt="">
+								2%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>likes</h3>
+							<img src="images/icon-instagram.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>5462</p>
+							<p class="cart__percentage up">
+								<img src="images/icon-up.svg" alt="">
+								2257%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>profile views</h3>
+							<img src="images/icon-instagram.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>52k</p>
+							<p class="cart__percentage up">
+								<img src="images/icon-up.svg" alt="">
+								1375%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>retweets</h3>
+							<img src="images/icon-twitter.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>117</p>
+							<p class="cart__percentage up">
+								<img src="images/icon-up.svg" alt="">
+								303%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>likes</h3>
+							<img src="images/icon-twitter.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>507</p>
+							<p class="cart__percentage up">
+								<img src="images/icon-up.svg" alt="">
+								553%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>likes</h3>
+							<img src="images/icon-youtube.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>107</p>
+							<p class="cart__percentage down">
+								<img src="images/icon-down.svg" alt="">
+								19%
+							</p>
+						</div>
+					</div>
+					<div class="overview__cart">
+						<div class="cart__title">
+							<h3>total views</h3>
+							<img src="images/icon-youtube.svg" alt="">
+						</div>
+						<div class="cart__number">
+							<p>1407</p>
+							<p class="cart__percentage down">
+								<img src="images/icon-down.svg" alt="">
+								12%
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
 
-	Social Media Dashboard
-	Total Followers: 23,004
-
-	Dark Mode
-
-
-
-	@nathanf
-	1987
-	Followers
-	12 Today
-
-	@nathanf
-	1044
-	Followers
-	99 Today
-
-	@realnathanf
-	11k
-	Followers
-	1099 Today
-
-	Nathan F.
-	8239
-	Subscribers
-	144 Today
-
-
-
+	<!--
 	Overview - Today
 
 	Page Views
@@ -76,7 +200,7 @@
 	<div class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="#">Your Name Here</a>.
-	</div>
+	</div> -->
 </body>
 
 </html>
